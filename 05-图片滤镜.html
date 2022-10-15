@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片滤镜</title>
+    <style>
+        img{
+            width: 400px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+             /* 过渡 ：3s的过渡时间*/
+            transition: all 3s;
+        }
+        /* 悬浮操作：鼠标悬浮的时候就正常 */
+        img:hover{
+            -webkit-filter:none;
+        }
+        .img1{
+             /*滤镜属性 -webkit-filter*/
+            /* 设置灰度：grayscale  1 百分之百灰 */
+            -webkit-filter: grayscale(0.5);
+           
+        }
+        .img2{
+            /* 设置滤镜属性的亮度
+            *brightness 默认值为1正常亮度  曝光2
+             */
+            -webkit-filter: brightness(2);
+        }
+        .img3{
+            /* 褐色属性：照片还旧度  正常为0 */
+            -webkit-filter: sepia(1);
+        }
+        .img4{
+            /* 模糊度 */
+            -webkit-filter: blur(5px);
+        }
+        .img5{
+            /* 对比度 1正常
+            如果调成0，就没有任何对比度，变为灰色
+            */
+            -webkit-filter: contrast(2);
+        }
+        .img6{
+            /* 饱和度 */
+            -webkit-filter: saturate(2);
+        }
+        .img7{
+            /* 胶片底色 */
+            -webkit-filter: invert(1);
+        }
+        .img8{
+            /* 色相旋转 */
+            -webkit-filter: hue-rotate(180deg);
+        }
+        .img9{
+            /* 一点一点被画出来的效果  拼接中间用空格隔开 */
+            -webkit-filter:blur(10px) brightness(20) grayscale(1);
+            transition: all 20s;
+        }
+        img9:hover{
+            -webkit-filter:blur(0px) brightness(1) grayscale(1);
+        }
+    </style>
+</head>
+<body>
+    <img class="img1" src="./images/xiaozhan.jpg" alt="">
+    <img class="img2" src="./images/xiaozhan.jpg" alt="">
+    <img class="img3" src="./images/xiaozhan.jpg" alt="">
+    <img class="img4" src="./images/xiaozhan.jpg" alt="">
+    <img class="img5" src="./images/xiaozhan.jpg" alt="">
+    <img class="img6" src="./images/xiaozhan.jpg" alt="">
+    <img class="img7" src="./images/xiaozhan.jpg" alt="">
+    <img class="img8" src="./images/xiaozhan.jpg" alt="">
+    <img class="img9" src="./images/xiaozhan.jpg" alt="">
+</body>
+</html>
